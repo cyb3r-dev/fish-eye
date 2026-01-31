@@ -1,6 +1,5 @@
 import { prisma } from "./prisma";
 
-
 export const getAllPhotographers = () => prisma.photographer.findMany();
 
 export const getPhotographer = (id) =>
