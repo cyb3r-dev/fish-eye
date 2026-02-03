@@ -2,7 +2,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, setup prisma :
+
+```bash
+# Reset the database
+npx prisma migrate reset
+# Make a migration
+npx prisma migrate dev --name init
+# Fill it with data
+npx prisma db seed
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev

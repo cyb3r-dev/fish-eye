@@ -1,9 +1,11 @@
-import styles from './page.module.css';
+import Header from './components/Header/Header';
+import PhotographersSection from './components/ThumbnailSection/ThumbnailSection';
 
 export default function Home() {
   return (
-    <main className={styles.home}>
-      <h1>Welcome to homepage</h1>
+    <main>
+    <Header />
+    <PhotographersSection />
     </main>
   );
 }

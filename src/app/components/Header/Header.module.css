@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42px 58px;
+    text-align: center;
+}
+
+.subtitle {
+    text-decoration: none;
+    color: #901C1C;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: Dm Sans, sans-serif;
+}
+
