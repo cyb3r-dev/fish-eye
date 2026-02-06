@@ -21,6 +21,23 @@ a {
     text-decoration: none;
 }
 
+button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: DM Sans, sans-serif;
+    color: #fff;
+    background: #901C1C;
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
