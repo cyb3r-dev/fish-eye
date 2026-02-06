@@ -10,8 +10,8 @@ export default async function Home() {
         <>
             <Header title="Nos Photographes" />
             <section className={styles.photographers}>
-                {photographers.map((photographer, i) => (
-                    <div key={i} className={styles.photographer}>
+                {photographers.map((photographer) => (
+                    <div key={photographer.id} className={styles.photographer}>
                         <Link href={`/photographers/${photographer.id}`}>
                             <Portrait photographer={photographer} />
                             <h2>{photographer.name}</h2>

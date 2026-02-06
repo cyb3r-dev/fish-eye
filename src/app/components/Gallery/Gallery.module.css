@@ -52,7 +52,6 @@
                 span {
                     display: flex;
                     align-items: center;
-                    gap: 0.25rem;
                     font-size: 1.5rem;
                     font-weight: 500;
                     color: #901C1C;
@@ -63,6 +62,29 @@
                         height: 1.25rem;
                     }
                 }
+            }
+        }
+    }
+    
+    .price {
+        position: fixed;
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        bottom: 0;
+        right: 3rem;
+        padding: 1.25rem;
+        border-radius: 5px 5px 0 0;
+        background: #DB8876;
+
+        span {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            svg {
+                height: 1.25rem;
             }
         }
     }

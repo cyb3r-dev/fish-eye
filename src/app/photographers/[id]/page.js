@@ -1,14 +1,16 @@
 import styles from "./page.module.css";
-import { getAllMediasForPhotographer, getPhotographer } from "@/src/lib/prisma-db";
+import { getAllMediasForPhotographer, getPhotographer, updateNumberOfLikes } from "@/src/lib/prisma-db";
 import Header from "../../components/Header/Header";
 import Portrait from "../../components/Portrait/Portrait";
 import Gallery from "../../components/Gallery/Gallery";
 import Contact from "../../components/Contact/Contact";
 
+
 export default async function PhotographerPage({ params }) {
     const { id } = await params;
     const photographer = await getPhotographer(parseInt(id));
     const medias = await getAllMediasForPhotographer(parseInt(id));
+
     return (
         <>
             <Header />
@@ -21,7 +23,7 @@ export default async function PhotographerPage({ params }) {
                 <Contact name={photographer.name}/>
                 <Portrait photographer={photographer} />
             </section>
-            <Gallery medias={medias} />
+            <Gallery medias={medias} photographer={photographer}/>
         </>
     );
 }

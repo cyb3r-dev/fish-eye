@@ -13,23 +13,23 @@ export default function Carousel({ isOpen, onClose, medias, index }) {
     const prev = () => setCurrent((c) => (c - 1 + medias.length) % medias.length);
     const next = () => setCurrent((c) => (c + 1) % medias.length);
 
-    const media = medias[current];
+    const m = medias[current];
     return (
         <>
             {isOpen && <div className={styles.modal}>
                 <div className={styles.content}>
                     <FontAwesomeIcon icon={faChevronLeft} onClick={prev}/>
                     <div className={styles.media}>
-                        {media.image && <img src={`/media/${media.image}`} alt={media.title} />}
-                        {media.video &&
+                        {m.image && <img src={`/media/${m.image}`} alt={m.title} />}
+                        {m.video &&
                             <video autoPlay muted loop>
-                                <source src={`/media/${media.video}`} type="video/mp4" />
+                                <source src={`/media/${m.video}`} type="video/mp4" />
                             </video>
                         }
                     </div>
                     <FontAwesomeIcon icon={faChevronRight} onClick={next}/>
+                    <span>{m.title}</span>
                     <FontAwesomeIcon icon={faXmark} className={styles.close} onClick={onClose} />
-                    <span>{media.title}</span>
                 </div>
             </div>}
         </>
