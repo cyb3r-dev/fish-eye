@@ -1,0 +1,53 @@
+.modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #C4C4C466;
+    z-index: 2;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-inline: 1rem;
+        position: relative;
+        background: #fff;
+    
+
+        img,
+        video {
+            width: 1050px;
+            height: 900px;
+            object-fit: cover;
+            margin-block: 4rem;
+
+        }
+
+        svg {
+            color: #901C1C;
+            cursor: pointer;
+            width: 42px;
+            height: 42px;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        span {
+            position: absolute;
+            left: 5rem; 
+            bottom: 1rem; 
+            font-size: 1.5rem;
+            color: #901C1C;
+        }
+    }
+}
