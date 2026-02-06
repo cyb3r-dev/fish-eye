@@ -1,8 +1,0 @@
-.photographersSection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px; 
-  padding-top: 50px;
-  justify-content: space-between;
-}
-
