@@ -19,12 +19,14 @@ export default function Carousel({ isOpen, onClose, medias, index }) {
             {isOpen && <div className={styles.modal}>
                 <div className={styles.content}>
                     <FontAwesomeIcon icon={faChevronLeft} onClick={prev}/>
-                    {media.image && <img src={`/media/${media.image}`} alt={media.title} />}
-                    {media.video &&
-                        <video autoPlay muted loop>
-                            <source src={`/media/${media.video}`} type="video/mp4" />
-                        </video>
-                    }
+                    <div className={styles.media}>
+                        {media.image && <img src={`/media/${media.image}`} alt={media.title} />}
+                        {media.video &&
+                            <video autoPlay muted loop>
+                                <source src={`/media/${media.video}`} type="video/mp4" />
+                            </video>
+                        }
+                    </div>
                     <FontAwesomeIcon icon={faChevronRight} onClick={next}/>
                     <FontAwesomeIcon icon={faXmark} className={styles.close} onClick={onClose} />
                     <span>{media.title}</span>
